@@ -6,7 +6,7 @@
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/kirirut/laba1OS.git
+    git clone https://github.com/kirirut/dirwalk.git
     ```
 
 2. Enter the repository directory:
