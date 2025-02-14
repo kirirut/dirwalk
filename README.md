@@ -12,7 +12,7 @@
 2. Enter the repository directory:
 
     ```bash
-    cd laba1OS
+    cd dirwalk
     ```
 
 3. Build the project using `CMake`:
