@@ -22,7 +22,7 @@
     make
     ```
 
-After building the utility, you can use the `dirwalk` command to traverse directories:
+After building the utility, you can use the `dirwalk` command to travelse directories:
 
 ```bash
 ./dirwalk <directory_path> <options>
