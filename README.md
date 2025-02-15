@@ -6,13 +6,13 @@
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/kirirut/laba1OS.git
+    git clone https://github.com/kirirut/dirwalk.git
     ```
 
 2. Enter the repository directory:
 
     ```bash
-    cd laba1OS
+    cd dirwalk
     ```
 
 3. Build the project using `CMake`:
@@ -22,7 +22,7 @@
     make
     ```
 
-After building the utility, you can use the `dirwalk` command to traverse directories:
+After building the utility, you can use the `dirwalk` command to travelse directories:
 
 ```bash
 ./dirwalk <directory_path> <options>
