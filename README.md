@@ -22,7 +22,7 @@
     make
     ```
 
-After building the utility, you can use the `dirwalk` command to travelse directories:
+After building the utility, you can use the `dirwalk` command to traverse directories:
 
 ```bash
 ./dirwalk <directory_path> <options>
@@ -51,3 +51,21 @@ After building the utility, you can use the `dirwalk` command to travelse direct
 - Linux/Unix-like operating system (tested on Ubuntu)
 - `gcc` or `clang` compiler (`sudo apt install gcc`)
 - `cmake` utility for building the project (`sudo apt install cmake`)
+
+---
+
+## Alias for zsh
+
+To create an alias for the `dirwalk` command in `zsh`, add the following to your `~/.zshrc`:
+
+```bash
+function dirwalk() {
+  /home/user/build/dirwalk "$1" "$2"
+}
+```
+
+Then, run:
+
+```bash
+source ~/.zshrc
+```
