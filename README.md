@@ -12,7 +12,7 @@
 2. Enter the repository directory:
 
     ```bash
-    cd dirwalk
+    cd dirwalk/build
     ```
 
 3. Build the project using `CMake`:
