@@ -4,7 +4,7 @@ int main(int argc, char *argv[]) {
     int show_links = 0, show_dirs = 0, show_files = 0, sort = 0;
     int opt;
     
-    while ((opt = getopt(argc, argv, "ldfs")) != -1) {
+    while ((opt = getopt(argc, argv, "ldfs")) != -1) {//Check params 
         switch (opt) {
             case 'l': show_links = 1; break;
             case 'd': show_dirs = 1; break;
@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
     }
 
     const char *dir = argv[optind];
-    if (!show_links && !show_dirs && !show_files) {
+    if (!show_links && !show_dirs && !show_files) {//All params if !=
         show_links = show_dirs = show_files = 1;
     }
 

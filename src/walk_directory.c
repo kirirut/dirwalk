@@ -6,10 +6,9 @@ void walk_directory(const char *dir_path, int show_links, int show_dirs, int sho
         perror("opendir");
         return;
     }
-
     struct dirent *entry;
     while ((entry = readdir(dir)) != NULL) {
-        if (strcmp(entry->d_name, ".") == 0 || strcmp(entry->d_name, "..") == 0) {
+        if (strcmp(entry->d_name, ".") == 0 || strcmp(entry->d_name, "..") == 0) {//Parent catalog or this catalog
             continue;
         }
         process_entry(dir_path, entry, show_links, show_dirs, show_files, sort);
