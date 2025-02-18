@@ -3,7 +3,7 @@
 int main(int argc, char *argv[]) {
     int show_links = 0, show_dirs = 0, show_files = 0, sort = 0;
     int opt;
-    setlocale(LC_ALL, "");
+    setlocale(LC_COLLATE, "");
     while ((opt = getopt(argc, argv, "ldfs")) != -1) {//Проверка параметров  
         switch (opt) {
             case 'l': show_links = 1; break;
