@@ -12,6 +12,7 @@
 2. Enter the repository directory:
 
     ```bash
+    mkdir build
     cd dirwalk/build
     ```
 
@@ -69,3 +70,10 @@ Then, run:
 ```bash
 source ~/.zshrc
 ```
+Also you can run `ass_dirwalk_alias.sh`.But you need to change path in 
+
+```bash
+alias_line='function dirwalk() { /home/user/build/dirwalk "$1" "$2"; }'
+```
+
+to your path for dirwalk.
