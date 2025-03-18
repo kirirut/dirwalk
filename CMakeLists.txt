@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(dirwalk)
 
-# Указываем стандарт C11
+# Указываем стандарт C11 для целевого файла
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
@@ -14,12 +14,6 @@ if (NOT CMAKE_BUILD_TYPE MATCHES "Debug|Release")
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 endif()
 
-# Флаги для Debug
-set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -g -ggdb -std=c11 -pedantic -W -Wall -Wextra")
-
-# Флаги для Release
-set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -std=c11 -pedantic -W -Wall -Wextra -Werror")
-
 # Указываем исходные файлы (относительные пути от CMakeLists.txt)
 add_executable(dirwalk
     src/main.c
@@ -27,5 +21,20 @@ add_executable(dirwalk
     src/process_entry.c
 )
 
+# Указываем заголовочные файлы (опционально, для IDE)
+target_sources(dirwalk PRIVATE
+    include/dirwalk.h
+)
+
 # Указываем директории с заголовочными файлами
 target_include_directories(dirwalk PRIVATE include)
+
+# Флаги компиляции для Debug
+target_compile_options(dirwalk PRIVATE
+    $<$<CONFIG:Debug>:-g -ggdb -pedantic -W -Wall -Wextra>
+)
+
+# Флаги компиляции для Release
+target_compile_options(dirwalk PRIVATE
+    $<$<CONFIG:Release>:-pedantic -W -Wall -Wextra -Werror>
+)
