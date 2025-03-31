@@ -1,4 +1,5 @@
 #include "dirwalk.h"
+#include <bits/getopt_core.h>
 
 int main(int argc, char *argv[]) {
     int show_links = 0, show_dirs = 0, show_files = 0, sort = 0;
